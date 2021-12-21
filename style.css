@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://motorshow.com.br/wp-content/uploads/sites/2/2020/12/ferrari-458-speciale-blindada-2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+
+}
+
+
+label {
+    font-weight: bold;
+    color: white;
+}
