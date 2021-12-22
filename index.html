@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pesquisa de Carros</title>
+<link rel="shortcut icon" href="./carro-de-corrida-com-saias-laterais.png" type="image/x-icon">
+    <title>Tabela fibe</title>
 </head>
 <body>
 
-    <main> 
-        <label for="">Marca</label>
+    <main>
+        <label id="labelMarca" for="">Marca</label>
         <select onchange="selecionarMarca(this.value)" name="" id="marcaId"></select>
 
-        <label for="">Modelo</label>
-        <select name="" id="modeloId"></select>
+        <label id="labelModelo" for="">Modelo</label>
+        <select onchange="selecionarModelo(this.value)" name="" id="modeloId"></select>
 
-        <label for="">Ano</label>
-        <select onchange="buscarAno(this.value)" name="" id="anoId"></select>
+        <label id="labelAno" for="">Ano</label>
+        <select onchange="selecionarAno(this.value)" name="" id="anoId"></select>
     </main>
+    <div id="caixa"></div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
 </body>
