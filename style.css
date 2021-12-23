@@ -1,32 +1,35 @@
-body {
-    background-image: url("https://i.pinimg.com/originals/46/25/f4/4625f460c4f17248e3459454eaf5a4e7.jpg");
+/* Parte responsiva para celulares */
+body{
+    padding: 5px;
+    background-image: url("https://image.freepik.com/fotos-gratis/imagem-vertical-de-parte-de-um-carro-cinza_181624-33069.jpg");
     background-repeat: no-repeat;
-    background-size: 100vw;
-    padding: 10px;
+    background-size: 100vw 100vh;
 
 }
 
+select{
+    background-color: gainsboro;
+    margin: 5px;
+}
 
 main {
-    display: flex;
+    display: block;
 }
 
 label {
     font-weight: bold;
     color: white;
-    margin: 0 7px;
+    margin: 5px 0px;
 }
 
-div {
-    width: 400px;
+#caixa {
+    width: 80vw;
     border: 1px solid black;
     margin-top: 20px;
     background-color: rgba(250, 250, 250, 0.5);
     display: none;
-    flex-wrap: wrap;
     padding: 10px;
     color: black;
-
 }
 
 h4 {
@@ -36,16 +39,48 @@ h4 {
 .titulo {
     width: 120px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 18px;
 }
 
 .descricao {
-    width: 280px;
-    margin-top: 10px;
-    font-size: 18;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 #labelAno, #labelModelo, #modeloId, #anoId{
     display: none; 
+}
+
+
+
+@media screen and (min-width:850px) {
+    body {
+        background-image: url("https://i.pinimg.com/originals/46/25/f4/4625f460c4f17248e3459454eaf5a4e7.jpg");
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        padding: 10px;
+    
+    }
+
+    #caixa {
+        width: 400px;
+        border: 1px solid black;
+        margin-top: 20px;
+        background-color: rgba(250, 250, 250, 0.4);
+        display: none;
+        padding: 10px;
+        color: black;
+    }
+
+    label {
+        font-weight: bold;
+        color: white;
+        margin: 0 7px;
+    }
+
+    main {
+        display: flex;
+    }
+    
 }

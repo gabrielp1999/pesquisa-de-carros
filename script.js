@@ -42,7 +42,6 @@ async function selecionarMarca(value) {
 async function selecionarModelo(value) {
     const codigoMarca = document.getElementById('marcaId').value;    
     const resultado = await axios(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${codigoMarca}/modelos/${value}/anos`);
-    console.log(resultado.data);
     const anoId = document.getElementById('anoId')
     const labelAno = document.getElementById('labelAno')
     const caixa = document.getElementById('caixa')
@@ -66,26 +65,37 @@ async function selecionarAno(value) {
     const codigoMarca = document.getElementById('marcaId').value;
     const codigoModelo = document.getElementById('modeloId').value;
     const resultado = await axios(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${codigoMarca}/modelos/${codigoModelo}/anos/${value}`);
+    
+    // const textoPesquisa = resultado.data.Modelo + " " + resultado.data.AnoModelo;
 
-    console.log(resultado.data)
+    // const resultadoImagem = await axios.get(`https://serpapi.com/search.json?q=${textoPesquisa}&tbm=isch&ijn=0&api_key=14ea1aef60872af939ead0290b04aad2b1b8c5a0c2122502342e419e19e8aa36`, {
+    //     headers: {
+    //         "Access-Control-Allow-Origin": "*",
+    //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+    //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+    //     }
+    // });
+
+    // console.log(resultadoImagem.data);
+
 
     const caixa = document.getElementById('caixa');
 
-    caixa.style.display ="flex";
+    caixa.style.display ="block";
     
     let conteudo = `
-    <span class="titulo">Marca:</span><span class="descricao">${resultado.data.Marca}</span>
-    <span class="titulo">Modelo:</span><span class="descricao">${resultado.data.Modelo}</span>    
-    <span class="titulo">Ano:</span><span class="descricao">${resultado.data.AnoModelo}</span>    
-    <span class="titulo">Valor:</span><span class="descricao">${resultado.data.Valor}</span>
-    <span class="titulo">Combustivel:</span><span class="descricao">${resultado.data.Combustivel}</span>    
-    <span class="titulo">Mes de referencia:</span><span class="descricao">${resultado.data.MesReferencia}</span>
+    <span class="titulo">Marca:</span> <br> <span class="descricao">${resultado.data.Marca}</span> <br>
+    <span class="titulo">Modelo:</span> <br> <span class="descricao">${resultado.data.Modelo}</span> <br>     
+    <span class="titulo">Ano:</span><br> <span class="descricao">${resultado.data.AnoModelo}</span> <br>    
+    <span class="titulo">Valor:</span> <br> <span class="descricao">${resultado.data.Valor}</span> <br>
+    <span class="titulo">Combustivel:</span> <br> <span class="descricao">${resultado.data.Combustivel}</span><br>    
+    <span class="titulo">Mes de referencia:</span><br><span class="descricao">${resultado.data.MesReferencia}</span><br>
     `;
-
-
     caixa.innerHTML = conteudo;
     
 }
+
+
 
 buscarMarcas()
 
