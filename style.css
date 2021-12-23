@@ -4,7 +4,6 @@ body{
     background-image: url("https://image.freepik.com/fotos-gratis/imagem-vertical-de-parte-de-um-carro-cinza_181624-33069.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
-
 }
 
 select{
@@ -52,6 +51,10 @@ h4 {
     display: none; 
 }
 
+#perfil{
+    display: none;
+}
+
 
 
 @media screen and (min-width:850px) {
@@ -60,7 +63,7 @@ h4 {
         background-repeat: no-repeat;
         background-size: 100vw;
         padding: 10px;
-    
+
     }
 
     #caixa {
@@ -81,6 +84,24 @@ h4 {
 
     main {
         display: flex;
+    }
+
+    img{
+        height: 50px;
+        width: 50px;
+    }
+
+    #perfil{
+        margin-left: 70vw;
+        margin-top: 75vh;
+        display: flex;
+    }
+
+    a {
+        color: black;
+        font-size: 22px;
+        text-decoration: none;
+        text-shadow: 3px 3px 3px white;
     }
     
 }
